@@ -1,18 +1,26 @@
-// import { Route, Routes } from 'react-router-dom';
+import CatalogPage from 'pages/Catalog';
+import HomePage from 'pages/Home';
+import { Link, Route, Routes } from 'react-router-dom';
 
-import autoItems from '../data.json';
-import { AutoInfo } from './Autolist';
-import { SearchBar } from './SearchBar';
 export const App = () => {
   return (
-    <>
-      <SearchBar />
-      <AutoInfo items={autoItems} />
-    </>
-    // <Routes>
-    //   <Route path="/" />
-    //   <Route path="/catalog" />
-    //   <Route path="/favorites" />
-    // </Routes>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">HOME</Link>
+          </li>
+          <li>
+            <Link to="/favorites">FAVORITES</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={HomePage} />
+        <Route path="/catalog" element={CatalogPage} />
+
+        <Route path="/favorites" element={<div>Favorite</div>} />
+      </Routes>
+    </div>
   );
 };
