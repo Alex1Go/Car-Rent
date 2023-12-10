@@ -1,11 +1,9 @@
-import { AutoForm } from 'components/AutoFormik';
-
-const HomePage = () => {
+const Home = () => {
   return (
     <div>
-      <AutoForm />
+      <h2>Poiu</h2>
     </div>
   );
 };
 
-export default HomePage;
+export default Home;

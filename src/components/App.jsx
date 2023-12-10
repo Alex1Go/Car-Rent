@@ -1,25 +1,21 @@
-import CatalogPage from 'pages/Catalog';
-import HomePage from 'pages/Home';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { SharedLayout } from './SharedLayout/SharedLayout';
+import { lazy } from 'react';
+
+const Home = lazy(() => import('../pages/Home'));
+const Catalog = lazy(() => import('../pages/Catalog'));
+const Favorite = lazy(() => import('../pages/Favorite'));
 
 export const App = () => {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/favorites">FAVORITES</Link>
-          </li>
-        </ul>
-      </nav>
       <Routes>
-        <Route path="/" element={HomePage} />
-        <Route path="/catalog" element={CatalogPage} />
-
-        <Route path="/favorites" element={<div>Favorite</div>} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/favorites" element={<Favorite />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
   );

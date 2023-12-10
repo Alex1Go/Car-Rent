@@ -1,30 +1,21 @@
-//import { fetchCards } from 'api';
-//import { AutoForm } from 'components/AutoFormik';
-// import { AutoInfo } from 'components/Autolist';
-// import { Button } from 'components/LoadMoreBtn';
-// import { useEffect } from 'react';
+import { fetchCards } from 'api';
+import { AutoForm } from 'components/AutoForm';
+import { AutoInfo } from 'components/Autolist';
+import { Button } from 'components/LoadMoreBtn';
+import { useEffect, useState } from 'react';
 
-//const CatalogPage = () => {
-//   const [carItems, setCarItems] = useState([]);
-//   const [page, setPage] = useState(1);
-//   const [loading, setLoading] = useState(false);
-//   const [loadMore, setLoadMore] = useState(false);
+const Catalog = () => {
+  const [cards, setCards] = useState([]);
+  useEffect(() => {
+    fetchCards('').then(setCards);
+  }, []);
+  return (
+    <div>
+      <AutoForm />
+      <AutoInfo items={cards} />
+      <Button />
+    </div>
+  );
+};
 
-//   useEffect(() => {}, []);
-
-//   const handleLoadMore = () => {
-//     setPage(prevState => prevState + 1);
-//   };
-//   return (
-//     <div>
-//       <AutoForm />
-/* <AutoInfo />
-      <Button /> */
-
-/* //   {loading && <AutoInfo items={carItems} />}
-    //   {loadMore && <Button onClick={handleLoadMore} />} */
-//     </div>
-//   );
-// };
-
-// export default CatalogPage;
+export default Catalog;
