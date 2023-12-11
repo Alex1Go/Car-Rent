@@ -1,4 +1,4 @@
-import { Formik, Field } from 'formik';
+import { Formik } from 'formik';
 import { carOptions } from '../marka.js';
 import { Label, Input, Forma, Block, Btn } from './AutoForm.styled.jsx';
 
@@ -49,9 +49,9 @@ export const AutoForm = () => {
           </Label>
           <Label>
             Car mileage / km
-            <Input name="mileage" placeholder="From" />
-            <Field name="mileage" placeholder="To" />
+            <Input name="mileage" placeholder="From" width="160" />
           </Label>
+          <Input name="mileage" placeholder="To" width="160px" />
           <Btn type="submit">Search</Btn>
         </Forma>
       </Formik>

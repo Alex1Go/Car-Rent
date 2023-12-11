@@ -13,7 +13,7 @@ export const Forma = styled(Form)`
 `;
 
 export const Label = styled.label`
-  //display: block;
+  display: block;
   color: #8a8a89;
   font-family: Manrope;
   font-size: 14px;
@@ -22,7 +22,8 @@ export const Label = styled.label`
   line-height: 18px;
 `;
 export const Input = styled(Field)`
-  display: block;
+  width: auto;
+  //display: block;
   padding: 14px 89px 14px 18px;
   justify-content: center;
   align-items: center;
@@ -37,6 +38,9 @@ export const Input = styled(Field)`
   font-weight: 500;
   line-height: 20px;
   border: none;
+  &:focus {
+    outline: rgb(202, 208, 223);
+  }
 `;
 export const Btn = styled.button`
   display: flex;
@@ -56,9 +60,10 @@ export const Btn = styled.button`
   line-height: 20px;
   border: none;
   cursor: pointer;
+  margin-top: auto;
 
-  :hover,
+  &:hover,
   :focus {
-    background-color: rgb(11, 68, 205);
+    background: rgb(11, 68, 205);
   }
 `;
