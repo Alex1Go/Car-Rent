@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { Field, Form } from 'formik';
 
 export const Block = styled.div`
-  width: 859px;
-  height: 74px;
+  /* width: 859px;
+  height: 74px; */
 `;
 
 export const Forma = styled(Form)`
+  max-width: 859px;
   gap: 18px;
   display: flex;
   height: 74px;
@@ -22,8 +23,8 @@ export const Label = styled.label`
   line-height: 18px;
 `;
 export const Input = styled(Field)`
-  width: auto;
   //display: block;
+  width: 60px;
   padding: 14px 89px 14px 18px;
   justify-content: center;
   align-items: center;

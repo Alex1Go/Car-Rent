@@ -49,9 +49,9 @@ export const AutoForm = () => {
           </Label>
           <Label>
             Car mileage / km
-            <Input name="mileage" placeholder="From" width="160" />
+            <Input name="mileage" placeholder="From" />
           </Label>
-          <Input name="mileage" placeholder="To" width="160px" />
+          <Input name="mileage" placeholder="To" />
           <Btn type="submit">Search</Btn>
         </Forma>
       </Formik>

@@ -1,7 +1,11 @@
+import { Welcome } from 'components/Welcome/Welcome';
+import { Img } from './Home.styled';
+
 const Home = () => {
   return (
     <div>
-      <h2>Poiu</h2>
+      <Welcome />
+      <Img />
     </div>
   );
 };
