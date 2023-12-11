@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcar_rent=self.webpackChunkcar_rent||[]).push([[266],{266:function(e,n,r){r.r(n);var c=r(184);n.default=function(){return(0,c.jsx)("div",{children:(0,c.jsx)("h2",{children:"Poiu"})})}}}]);
-//# sourceMappingURL=266.6e934e65.chunk.js.map
