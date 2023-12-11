@@ -19,4 +19,8 @@ export const Text = styled.p`
   font-weight: 600;
   font-size: 18px;
   color: #645c5c;
+  margin-left: 25px;
+`;
+export const Block = styled.div`
+  display: flex;
 `;

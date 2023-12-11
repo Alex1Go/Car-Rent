@@ -23,7 +23,6 @@ export const Label = styled.label`
   line-height: 18px;
 `;
 export const Input = styled(Field)`
-  //display: block;
   width: 60px;
   padding: 14px 89px 14px 18px;
   justify-content: center;

@@ -9,6 +9,7 @@ import {
   Autoinfo,
   Blockinfo,
   Btn,
+  Rental,
 } from './AutoCard.styled';
 
 const customStyles = {
@@ -20,6 +21,10 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     width: '541px',
+    height: '752px',
+    borderRadius: '24px',
+    background: 'ffffff',
+    padding: '40px',
   },
 };
 Modal.setAppElement('#root');
@@ -36,6 +41,9 @@ export const AutoCard = ({ item }) => {
     rentalCompany,
     rentalPrice,
     mileage,
+    address,
+    rentalConditions,
+    engineSize,
   } = item;
   return (
     <>
@@ -62,21 +70,29 @@ export const AutoCard = ({ item }) => {
         contentLabel="Example Modal"
       >
         <div>
-          <Photo src={img} alt={make} />
+          <Photo
+            src={img}
+            alt={make}
+            style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+          />
           <Info>
-            <Text>
-              {make} <Span>{model}</Span>, {year}
+            <Text style={{ fontSize: '18px' }}>
+              {make} <Span style={{ fontSize: '18px' }}>{model}</Span>, {year}
             </Text>
-            <Price>{rentalPrice}</Price>
           </Info>
           <Blockinfo>
+            <Autoinfo>{address}</Autoinfo>
             <Autoinfo>{rentalCompany}</Autoinfo>
             <Autoinfo>{type}</Autoinfo>
-            <Autoinfo>{mileage}</Autoinfo>
+            <Autoinfo>{engineSize}</Autoinfo>
             <Autoinfo>{functionalities[0]}</Autoinfo>
+            <Autoinfo>{rentalConditions}</Autoinfo>
+            <Autoinfo>{mileage}</Autoinfo>
+            <Price>{rentalPrice}</Price>
           </Blockinfo>
         </div>
         <button onClick={() => setIsModalOpen(false)}>close</button>
+        <Rental type="button">Rental car</Rental>
       </Modal>
     </>
   );

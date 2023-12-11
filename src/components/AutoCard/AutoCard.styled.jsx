@@ -77,3 +77,17 @@ export const Btn = styled.button`
     background-color: #0b44cd;
   }
 `;
+export const Rental = styled.button`
+  display: inline-flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #ffffff;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+`;
