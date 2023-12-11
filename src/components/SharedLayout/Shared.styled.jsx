@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -22,25 +23,15 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 18px;
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 20px;
-  color: rgb(8, 236, 236);
-
   :hover,
   :focus {
-    color: rgb(6, 133, 133);
+    color: rgb(4, 134, 134);
   }
 `;
-export const StyledLink = styled.NavLink`
+export const StyledLink = styled(NavLink)`
   color: black;
-
+  text-decoration: none;
   &.active {
-    color: orange;
+    color: rgb(3, 139, 139);
   }
 `;

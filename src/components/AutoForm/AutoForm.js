@@ -1,5 +1,6 @@
-import { Formik, Field, Form } from 'formik';
-import { carOptions } from './marka.js';
+import { Formik, Field } from 'formik';
+import { carOptions } from '../marka.js';
+import { Label, Input, Forma, Block, Btn } from './AutoForm.styled.jsx';
 
 const CustomSelectComponent = props => {
   const { options, ...inputProps } = props;
@@ -16,7 +17,7 @@ const CustomSelectComponent = props => {
 
 export const AutoForm = () => {
   return (
-    <>
+    <Block>
       <Formik
         initialValues={{
           carBrand: '',
@@ -25,38 +26,35 @@ export const AutoForm = () => {
         }}
         onSubmit={values => {}}
       >
-        <Form>
-          <label>
+        <Forma>
+          <Label>
             Car brand
-            <Field
+            <Input
               name="carBrand"
               as={CustomSelectComponent}
               options={carOptions}
               placeholder="Select Car Brand"
             />
-          </label>
-
-          <label>
+          </Label>
+          <Label>
             Price/1 hour
-            <Field as="select" id="price" name="price" placeholder="To $">
+            <Input as="select" id="price" name="price" placeholder="To $">
               <option value="30">30</option>
               <option value="40">40</option>
               <option value="50">50</option>
               <option value="60">60</option>
               <option value="70">70</option>
               <option value="80">80</option>
-            </Field>
-          </label>
-
-          <label>
+            </Input>
+          </Label>
+          <Label>
             Car mileage / km
-            <Field id="mileage" name="mileage" placeholder="From" />
-            <Field id="mileage" name="mileage" placeholder="To" />
-          </label>
-
-          <button type="submit">Search</button>
-        </Form>
+            <Input name="mileage" placeholder="From" />
+            <Field name="mileage" placeholder="To" />
+          </Label>
+          <Btn type="submit">Search</Btn>
+        </Forma>
       </Formik>
-    </>
+    </Block>
   );
 };

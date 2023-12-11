@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-import { Header, Item, List, Container } from './Shared.styled.jsx';
+import { Outlet } from 'react-router-dom';
+import { Header, Item, List, Container, StyledLink } from './Shared.styled.jsx';
 
 export const SharedLayout = () => {
   return (
@@ -8,13 +8,13 @@ export const SharedLayout = () => {
       <Header>
         <List>
           <Item>
-            <NavLink to="/">HOME</NavLink>
+            <StyledLink to="/">HOME</StyledLink>
           </Item>
           <Item>
-            <NavLink to="/catalog">CATALOG</NavLink>
+            <StyledLink to="/catalog">CATALOG</StyledLink>
           </Item>
           <Item>
-            <NavLink to="/favorites">FAVORITES</NavLink>
+            <StyledLink to="/favorites">FAVORITES</StyledLink>
           </Item>
         </List>
       </Header>
